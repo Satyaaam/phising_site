@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Phishing Checker</h2>
-    <form method="POST" action="{% url 'check_phishing' %}">
+    <form method="POST" action="{% url 'check-phishing' %}">
         {% csrf_token %}
         <label for="urlInput">Enter URL:</label>
         <input type="text" name="url" id="urlInput" placeholder="https://example.com" required>
