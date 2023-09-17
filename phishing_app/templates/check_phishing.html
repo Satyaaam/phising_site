@@ -1,0 +1,20 @@
+<!-- phishing_app/templates/phishing_app/check_phishing.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Checker Result</title>
+</head>
+<body>
+    <h2>Phishing Checker</h2>
+    <form method="POST" action="{% url 'check_phishing' %}">
+        {% csrf_token %}
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" name="url" id="urlInput" placeholder="https://example.com" required>
+        <button type="submit">Check</button>
+    </form>
+    <h2>Phishing Checker Result</h2>
+    <p>Result: <span id="phishingResult">{{ result }}</span></p>
+</body>
+</html>
